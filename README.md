@@ -54,5 +54,51 @@ This centralized system simplifies video sharing, syllabus management, and commu
 
 ---
 
+## Setup & Installation Guide
 
+To make running this project easier, a `requirements.txt` file has been included.  
+This file was generated using `pip freeze` and contains all the **exact versions** of dependencies used in this Django project.  
 
+Follow these steps:
+
+### 1. Create Project Folder (Linux)
+```bash
+mkdir Qclassroom
+cd Qclassroom
+```
+### 2. Create Virtual Environment (On Windows)
+```bash
+# Create virtual environment
+python -m venv venv
+
+# Activate virtual environment
+venv\Scripts\activate
+```
+### On Linux / macOS
+```bash
+# Create virtual environment
+python3 -m venv venv
+
+# Activate virtual environment
+source venv/bin/activate
+```
+### 3. Install Dependencies
+- Once inside the virtual environment, install required packages:
+```bash
+pip install -r requirements.txt
+```
+### 4. Run the Project
+- Navigate to the Django project folder (qproject) and run:
+```bash
+python manage.py runserver
+```
+### Notes
+Always activate the virtual environment before running the project.
+To deactivate:
+```bash
+deactivate
+```
+If any new packages are added, update requirements.txt with:
+```bash
+pip freeze > requirements.txt
+```
