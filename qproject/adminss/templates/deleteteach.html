@@ -1,0 +1,67 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Table 03</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="{% static 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+	
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+	</head>
+	<body>
+
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h4 class="text-center mb-4">DeleteTeacher</h4>
+					<div class="table-wrap">
+						<table class="table">
+					    <thead class="thead-primary">
+							<tr>
+								<th>ID</th>
+								<th>Name</th>
+								<th>Age</th>
+								<th>Place</th>
+								<th>Email</th>
+								<th>Type</th>
+								<th>Phone</th>
+								<th>Approval</th>
+							  </tr>
+							</thead>
+							<tbody>
+								{% for i in da %}
+								<tr>
+								  <td>{{i.id}}</td>
+								  <td>{{i.Name}}</td>
+								  <td>{{i.Age}}</td>
+								  <td>{{i.Place}}</td>
+								  <td>{{i.Email}}</td>
+								  <td>{{i.Type}}</td>
+								  <td>{{i.Phone}}</td> 
+								  <td><a href="{% url 'delteach' i.id %}" class="btn btn-primary">Delete</a></td>
+								</tr>
+							
+							{% endfor %}
+					        
+					    </tbody>
+					  </table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/popper.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/main (2).js' %}"></script>
+
+	</body>
+</html>
+

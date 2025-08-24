@@ -1,0 +1,11 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+{% for i in da %}
+<video style="width:100%; height:100%;" controls>
+    <source src="{{ i.Video }}" type="video/mp4">
+</video>
+{% endfor %}
+
+</body> 
+</html>

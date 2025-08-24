@@ -1,0 +1,60 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Table 03</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="{% static 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+	
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+	</head>
+	<body>
+
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h4 class="text-center mb-4">Videos</h4>
+					<div class="table-wrap">
+						<table class="table">
+					    <thead class="thead-primary">
+							<tr>
+								<th>ID</th>
+								<th>Subject</th>
+								<th>Teacher</th>
+								<th>Date</th>
+								<th>Delete</th>
+							  </tr>
+							</thead>
+							<tbody>
+							{% for i in da %}
+								<tr>
+								  <td>{{i.id}}</td>
+								  <td>{{i.Subject}}</td>
+								  <td>{{i.Teacher}}</td>
+								  <td>{{i.Date}}</td>
+								  <td><a href="{% url 'delvid' i.id %}" class="btn btn-primary">Delete</a></td>
+								</tr>
+							{% endfor %}
+								
+							</tbody>
+					  </table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/popper.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/main (2).js' %}"></script>
+
+	</body>
+</html>
+
